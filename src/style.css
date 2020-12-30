@@ -1,0 +1,143 @@
+/**************** CUSTOM FONT ****************/
+@font-face {
+  font-family: "customFont1";
+  src: local("customFontOne"),
+    url("./resources/Fonts/customFontOne.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "customFont2";
+  src: local("customFontTwoRegular"),
+    url("./resources/Fonts/customFont2_regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "customFont2Bold";
+  src: local("customFontTwoBold"),
+    url("./resources/Fonts/customFont2_bold.ttf") format("truetype");
+}
+/* ***************END OF CUSTOM FONT***************  */
+
+/**************** MAIN CONTAINER ****************/
+.flex-container-main {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+/* ***************END OF MAIN CONTAINER*************** */
+
+/**************** HANDWRITTEN ****************/
+.flex-container-handwrittenArea {
+  border: 1px solid black;
+  margin: 10px;
+  background-image: url("./resources/images/page3.jpg");
+  background-size: 100% 100%;
+  width: 60%;
+  padding: 10px;
+  height: 1122.5px;
+  width: 793px;
+  overflow: hidden;
+}
+
+/* .handWrittenContainer {
+  border: 1px solid black;
+  max-width: 600px;
+  margin: 0px;
+  padding: 0px;
+} */
+
+.handWritten {
+  font-family: customFont1;
+  font-size: 55px;
+  margin: 0px;
+  padding: 0px;
+  white-space: pre-line;
+  line-height: 45px;
+  /* border: 1px solid black; */
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ***************END OF HANDWRITTEN*************** */
+
+/**************** TYPEAREA ****************/
+.flex-container-typeArea {
+  border: 1px solid black;
+  border-radius: 15px;
+  max-height: 300px;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.typeArea {
+  font-size: 19px;
+  font-weight: bold;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.typeArea::-webkit-scrollbar {
+  display: none;
+}
+/* ***************END OF TYPEAREA*************** */
+
+/**************** SETTINGS AREA ****************/
+.flex-container-typeArea_Settings {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  margin: 10px;
+}
+.flex-container-Settings {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container-Settings-Items {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  border: 1px solid black;
+  padding: 12px;
+  border-radius: 15px;
+}
+.flex-container-axis-setting {
+  display: flex;
+  flex-direction: row;
+}
+
+.Settings-FontSize-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.Settings-FontSize-button {
+  border: none;
+  padding: 8px;
+  background-color: rgb(96, 171, 214);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+.input-button-Container {
+  display: inline-block;
+}
+.Settings-FontSize-input::-webkit-outer-spin-button,
+.Settings-FontSize-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Settings-FontSize-input::-webkit-outer-spin-button {
+  -moz-appearance: textfield;
+}
