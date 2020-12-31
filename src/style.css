@@ -39,13 +39,6 @@
   overflow: hidden;
 }
 
-/* .handWrittenContainer {
-  border: 1px solid black;
-  max-width: 600px;
-  margin: 0px;
-  padding: 0px;
-} */
-
 .handWritten {
   font-family: customFont1;
   font-size: 55px;
@@ -110,6 +103,7 @@
 .flex-container-axis-setting {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Settings-FontSize-input {

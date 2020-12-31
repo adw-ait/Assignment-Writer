@@ -17,12 +17,18 @@ function App() {
   });
 
   // ********************* HANDLER FUNCTIONS *********************
+
+  //** LINE HEIGHT */
   const handleLineHeight = (e) => {
     setsettings({ ...settings, lineHeight: e.target.value });
   };
+
+  //** FONT SIZE */
   const handleFontSize = (e) => {
     setsettings({ ...settings, fontSize: e });
   };
+
+  //** AXIS CHANGE */
   const handleAxisChange = (e) => {
     const axisName = e.target.name;
     if (axisName === "x-axis") {
@@ -37,10 +43,13 @@ function App() {
       });
     }
   };
+
+  //** LETTER SPACING */
   const handleLetterSpacing = (e) => {
     setsettings({ ...settings, letterSpacing: e.target.value });
   };
 
+  //** INPUT CHANGE */
   const handleInputChange = (e) => {
     setinputValue(e.target.value);
     sethandWrittenText(inputValue);

@@ -6,7 +6,7 @@ function HandwritingArea() {
 
   return (
     <div className="flex-container-handwrittenArea">
-      <div>
+      <div id="capture">
         <p
           className="handWritten"
           style={{

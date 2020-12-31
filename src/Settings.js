@@ -1,5 +1,6 @@
 import React from "react";
 import AxisManage from "./AxisManage";
+
 import FontSize from "./FontSize";
 import LetterSpacing from "./LetterSpacing";
 import LineHeight from "./LineHeight";
