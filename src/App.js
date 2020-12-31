@@ -14,10 +14,19 @@ function App() {
     axis: { x: 0, y: 0 },
     fontSize: 55,
     lineHeight: 45,
+    inkColor: "black",
+    fontFamily: "customFont1",
   });
 
   // ********************* HANDLER FUNCTIONS *********************
-
+  //**FONT FAMILY */
+  const handleFontFamily = () => {
+    // setsettings({...settings,fontFamily:})
+  };
+  //** INK COLOR */
+  const handleColorChange = (e) => {
+    setsettings({ ...settings, inkColor: e });
+  };
   //** LINE HEIGHT */
   const handleLineHeight = (e) => {
     setsettings({ ...settings, lineHeight: e.target.value });
@@ -66,6 +75,8 @@ function App() {
         handleAxisChange,
         handleFontSize,
         handleLineHeight,
+        handleColorChange,
+        handleFontFamily,
       }}
     >
       <h2>Assignment Writer</h2>
