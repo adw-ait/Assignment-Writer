@@ -15,6 +15,7 @@ function HandwritingArea() {
             top: `${settings.axis.y}px`,
             fontSize: `${settings.fontSize}px`,
             lineHeight: `${settings.lineHeight}px`,
+            color: `${settings.inkColor}`,
           }}
         >
           {inputValue}

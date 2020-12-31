@@ -40,7 +40,8 @@
 }
 
 .handWritten {
-  font-family: customFont1;
+  font-family: customFont2;
+
   font-size: 55px;
   margin: 0px;
   padding: 0px;
@@ -134,4 +135,14 @@
 
 .Settings-FontSize-input::-webkit-outer-spin-button {
   -moz-appearance: textfield;
+}
+
+.Settings-InkColor-select {
+  padding: 3px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
 }

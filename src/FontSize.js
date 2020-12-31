@@ -8,7 +8,7 @@ function FontSize() {
     setinput(e.target.value);
   };
   return (
-    <div className="flex-container-Settings-Items ">
+    <div className="flex-container-Settings-Items">
       <h2>Font Size</h2>
       <div className="input-button-Container">
         <input
