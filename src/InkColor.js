@@ -9,7 +9,7 @@ function InkColor() {
     <div className="flex-container-Settings-Items">
       <h2>Ink Color</h2>
       <select
-        className="Settings-InkColor-select"
+        className="Settings-select"
         value={optionValue}
         onChange={(e) => {
           return (

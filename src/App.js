@@ -3,6 +3,7 @@ import HandwritingArea from "./HandwritingArea";
 import Typearea from "./Typearea";
 import "./style.css";
 import Settings from "./Settings";
+import AwIcon from "./resources/images/assignmentWriter.png";
 
 export const AppContext = React.createContext();
 
@@ -19,9 +20,10 @@ function App() {
   });
 
   // ********************* HANDLER FUNCTIONS *********************
+
   //**FONT FAMILY */
-  const handleFontFamily = () => {
-    // setsettings({...settings,fontFamily:})
+  const handleFontFamily = (e) => {
+    setsettings({ ...settings, fontFamily: e });
   };
   //** INK COLOR */
   const handleColorChange = (e) => {
@@ -79,7 +81,17 @@ function App() {
         handleFontFamily,
       }}
     >
-      <h2>Assignment Writer</h2>
+      <div className="Header-Container">
+        <h2
+          className="header"
+          style={{
+            fontFamily: `${settings.fontFamily}`,
+          }}
+        >
+          Assignment Writer
+        </h2>
+        <img className="header-img" src={AwIcon} alt="assignment writer" />
+      </div>
       <div className="flex-container-main">
         <div className="flex-container-typeArea_Settings">
           <Typearea />

@@ -1,5 +1,6 @@
 import React from "react";
 import AxisManage from "./AxisManage";
+import DownloadPage from "./DownloadPage";
 import FontFamily from "./FontFamily";
 
 import FontSize from "./FontSize";
@@ -16,6 +17,8 @@ function Settings() {
       <LineHeight />
       <InkColor />
       <FontFamily />
+
+      <DownloadPage />
     </div>
   );
 }

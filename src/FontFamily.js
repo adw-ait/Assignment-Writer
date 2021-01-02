@@ -7,12 +7,17 @@ function FontFamily() {
     <div className="flex-container-Settings-Items">
       <h2>Font Family</h2>
       <select
-        className="Settings-InkColor-select"
+        className="Settings-select"
         value={optionValue}
-        onChange={handleFontFamily}
+        onChange={(e) => {
+          return (
+            handleFontFamily(e.target.value), setoptionValue(e.target.value)
+          );
+        }}
       >
         <option value="customFont1">Font 1</option>
         <option value="customFont2">Font 2</option>
+        <option value="customFont3">Font 3</option>
       </select>
     </div>
   );

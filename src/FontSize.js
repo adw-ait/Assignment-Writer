@@ -6,6 +6,7 @@ function FontSize() {
   const [input, setinput] = useState(55);
   const handleInput = (e) => {
     setinput(e.target.value);
+    handleFontSize(e.target.value);
   };
   return (
     <div className="flex-container-Settings-Items">
