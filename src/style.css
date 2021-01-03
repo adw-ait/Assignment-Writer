@@ -17,12 +17,6 @@ html {
 }
 
 @font-face {
-  font-family: "customFont2Bold";
-  src: local("customFontTwoBold"),
-    url("./resources/Fonts/customFont2_bold.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "customFont3";
   src: local("customFont3"),
     url("./resources/Fonts/customFontThree.ttf") format("truetype");

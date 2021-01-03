@@ -9,7 +9,6 @@ function LetterSpacing() {
       <h2>Letter Spacing</h2>
       <input
         type="range"
-        min="-10"
         max="50"
         value={settings.letterSpacing}
         onChange={handleLetterSpacing}

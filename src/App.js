@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import HandwritingArea from "./HandwritingArea";
 import Typearea from "./Typearea";
-import "./style.css";
 import Settings from "./Settings";
 import AwIcon from "./resources/images/assignmentWriter.png";
 
@@ -17,6 +16,7 @@ function App() {
     lineHeight: 45,
     inkColor: "black",
     fontFamily: "customFont1",
+    bgPage: "page1",
   });
 
   // ********************* HANDLER FUNCTIONS *********************
