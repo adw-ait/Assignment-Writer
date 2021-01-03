@@ -2,28 +2,6 @@ html {
   background-color: #f4f3fb;
 }
 
-/**************** CUSTOM FONT ****************/
-
-@font-face {
-  font-family: "customFont1";
-  src: local("customFontOne"),
-    url("./resources/Fonts/customFontOne.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "customFont2";
-  src: local("customFontTwoRegular"),
-    url("./resources/Fonts/customFont2_regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "customFont3";
-  src: local("customFont3"),
-    url("./resources/Fonts/customFontThree.ttf") format("truetype");
-}
-
-/* ***************END OF CUSTOM FONT***************  */
-
 /**************** MAIN CONTAINER ****************/
 
 .flex-container-main {
@@ -52,7 +30,6 @@ html {
 
 /* *********The text that is being written********* */
 .handWritten {
-  font-family: customFont2;
   font-size: 55px;
   margin: 0px;
   padding: 0px;
@@ -213,4 +190,5 @@ html {
 .DownloadBtn:hover {
   background-color: rgb(18, 144, 228);
   font-weight: 900;
+  cursor: pointer;
 }

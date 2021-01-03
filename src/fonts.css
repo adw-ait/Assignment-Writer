@@ -1,0 +1,21 @@
+/* *************** CUSTOM FONT ****************/
+
+@font-face {
+  font-family: "customFont1";
+  src: url("./resources/Fonts/webFonts/customFont1.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "customFont2";
+  src: url("./resources/Fonts/webFonts/customFont2.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "customFont3";
+  src: url("./resources/Fonts/webFonts/customFont3.woff2") format("woff2");
+  font-display: block;
+}
+
+/* ***************END OF CUSTOM FONT***************  */
