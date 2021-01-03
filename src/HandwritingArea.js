@@ -1,11 +1,18 @@
 import React, { useContext } from "react";
 import { AppContext } from "./App";
+import blank from "./resources/images/page2.jpg";
+import ruled from "./resources/images/page1.jpg";
+// import ruled2 from "./resources/images/page3.jpg";
 
 function HandwritingArea() {
   const { inputValue, settings } = useContext(AppContext);
-
+  const whichPage = settings.bgPage === "blank" ? blank : ruled;
   return (
-    <div className="flex-container-handwrittenArea" id="capture">
+    <div
+      className="flex-container-handwrittenArea"
+      id="capture"
+      style={{ backgroundImage: `url(${whichPage})` }}
+    >
       <div>
         <p
           className="handWritten"

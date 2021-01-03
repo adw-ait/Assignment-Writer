@@ -16,10 +16,15 @@ function App() {
     lineHeight: 45,
     inkColor: "black",
     fontFamily: "customFont1",
-    bgPage: "page1",
+    bgPage: "blank",
   });
 
   // ********************* HANDLER FUNCTIONS *********************
+
+  //** PAGE CHOOSER */
+  const handlePageChoose = (e) => {
+    setsettings({ ...settings, bgPage: e });
+  };
 
   //**FONT FAMILY */
   const handleFontFamily = (e) => {
@@ -79,6 +84,7 @@ function App() {
         handleLineHeight,
         handleColorChange,
         handleFontFamily,
+        handlePageChoose,
       }}
     >
       <div className="Header-Container">

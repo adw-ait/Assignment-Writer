@@ -7,6 +7,7 @@ import FontSize from "./FontSize";
 import InkColor from "./InkColor";
 import LetterSpacing from "./LetterSpacing";
 import LineHeight from "./LineHeight";
+import PageChooser from "./PageChooser";
 
 function Settings() {
   return (
@@ -17,6 +18,7 @@ function Settings() {
       <LineHeight />
       <InkColor />
       <FontFamily />
+      <PageChooser />
 
       <DownloadPage />
     </div>
