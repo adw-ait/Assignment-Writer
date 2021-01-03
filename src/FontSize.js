@@ -11,20 +11,13 @@ function FontSize() {
   return (
     <div className="flex-container-Settings-Items">
       <h2>Font Size</h2>
-      <div className="input-button-Container">
-        <input
-          className="Settings-FontSize-input"
-          type="number"
-          value={input}
-          onChange={handleInput}
-        />
-        <button
-          className="Settings-FontSize-button"
-          onClick={() => handleFontSize(input)}
-        >
-          OK
-        </button>
-      </div>
+
+      <input
+        className="Settings-FontSize-input"
+        type="number"
+        value={input}
+        onChange={handleInput}
+      />
     </div>
   );
 }

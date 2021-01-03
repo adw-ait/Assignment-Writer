@@ -1,6 +1,6 @@
 import html2canvas from "html2canvas";
 import React from "react";
-import FileSaver, { saveAs } from "file-saver";
+import FileSaver from "file-saver";
 
 function DownloadPage() {
   const handleDownload = () => {
