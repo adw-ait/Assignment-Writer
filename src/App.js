@@ -106,14 +106,14 @@ function App() {
         />
       )}
       <div className="Header-Container">
-        <h2
+        <p
           className="header"
           style={{
             fontFamily: `${settings.fontFamily}`,
           }}
         >
           Assignment Writer
-        </h2>
+        </p>
         <img className="header-img" src={AwIcon} alt="assignment writer" />
       </div>
       <div className="flex-container-main">

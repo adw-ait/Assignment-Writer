@@ -18,4 +18,20 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "customFont4";
+  src: url("./resources/Fonts/webFonts/customFont4.woff2") format("woff2");
+  font-display: block;
+}
+@font-face {
+  font-family: "customFont5";
+  src: url("./resources/Fonts/webFonts/customFont5.woff2") format("woff2");
+  font-display: block;
+}
+@font-face {
+  font-family: "customFont6";
+  src: url("./resources/Fonts/webFonts/customFont6.woff2") format("woff2");
+  font-display: block;
+}
+
 /* ***************END OF CUSTOM FONT***************  */

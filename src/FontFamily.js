@@ -18,6 +18,9 @@ function FontFamily() {
         <option value="customFont1">Font 1</option>
         <option value="customFont2">Font 2</option>
         <option value="customFont3">Font 3</option>
+        <option value="customFont4">Font 4</option>
+        <option value="customFont5">Font 5</option>
+        <option value="customFont6">Font 6</option>
       </select>
     </div>
   );
