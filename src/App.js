@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HandwritingArea from "./HandwritingArea";
 import Typearea from "./Typearea";
 import Settings from "./Settings";
 import AwIcon from "./resources/images/assignmentWriter.png";
+import GithubCorner from "react-github-corner";
 
 export const AppContext = React.createContext();
 
 function App() {
   const [inputValue, setinputValue] = useState("hello\nworld");
   const [handWrittenText, sethandWrittenText] = useState(inputValue);
+  const [isMobile, setisMobile] = useState(false);
   const [settings, setsettings] = useState({
     letterSpacing: 0,
     axis: { x: 0, y: 0 },
@@ -18,6 +20,15 @@ function App() {
     fontFamily: "customFont1",
     bgPage: "blank",
   });
+
+  //** Detect Mobile display */
+  useEffect(() => {
+    const screenWidth = window.outerWidth;
+    console.log(screenWidth);
+    if (screenWidth <= 500) {
+      setisMobile(true);
+    }
+  }, [isMobile]);
 
   // ********************* HANDLER FUNCTIONS *********************
 
@@ -87,6 +98,13 @@ function App() {
         handlePageChoose,
       }}
     >
+      {isMobile ? null : (
+        <GithubCorner
+          size={100}
+          href={"https://github.com/adw-ait/Assignment-Writer"}
+          direction={"right"}
+        />
+      )}
       <div className="Header-Container">
         <h2
           className="header"
