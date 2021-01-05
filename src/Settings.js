@@ -12,7 +12,7 @@ function Settings() {
       <FontFamily />
       <FontSize />
       <InkColor />
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense>
         <LazyLoadedComponents />
       </Suspense>
     </div>
