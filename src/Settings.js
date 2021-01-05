@@ -1,26 +1,20 @@
-import React from "react";
-import AxisManage from "./AxisManage";
-import DownloadPage from "./DownloadPage";
+import React, { Suspense } from "react";
 import FontFamily from "./FontFamily";
-
 import FontSize from "./FontSize";
 import InkColor from "./InkColor";
-import LetterSpacing from "./LetterSpacing";
-import LineHeight from "./LineHeight";
+import LazyLoadedComponents from "./LazyLoadedComponents";
 import PageChooser from "./PageChooser";
 
 function Settings() {
   return (
     <div className="flex-container-Settings">
-      <LetterSpacing />
-      <AxisManage />
-      <FontSize />
-      <LineHeight />
-      <InkColor />
-      <FontFamily />
       <PageChooser />
-
-      <DownloadPage />
+      <FontFamily />
+      <FontSize />
+      <InkColor />
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <LazyLoadedComponents />
+      </Suspense>
     </div>
   );
 }
