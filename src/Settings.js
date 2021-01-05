@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import Skeleton from "react-loading-skeleton";
 import FontFamily from "./FontFamily";
 import FontSize from "./FontSize";
 import InkColor from "./InkColor";
@@ -12,7 +13,7 @@ function Settings() {
       <FontFamily />
       <FontSize />
       <InkColor />
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<Skeleton />}>
         <LazyLoadedComponents />
       </Suspense>
     </div>
