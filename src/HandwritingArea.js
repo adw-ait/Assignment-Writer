@@ -1,17 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "./App";
 import blank from "./resources/images/page2.jpg";
 import ruled from "./resources/images/page1.jpg";
-// import ruled2 from "./resources/images/page3.jpg";
 
 function HandwritingArea() {
-  const { inputValue, settings } = useContext(AppContext);
+  const {
+    inputValue,
+    settings,
+    handwrittenAreaRef,
+    sethandwrittenAreaWidth,
+  } = useContext(AppContext);
   const whichPage = settings.bgPage === "blank" ? blank : ruled;
+
+  useEffect(() => {
+    sethandwrittenAreaWidth(handwrittenAreaRef.current.clientWidth - 20);
+  });
+
   return (
     <div
       className="flex-container-handwrittenArea"
       id="capture"
       style={{ backgroundImage: `url(${whichPage})` }}
+      ref={handwrittenAreaRef}
     >
       <div>
         <p
@@ -24,6 +34,7 @@ function HandwritingArea() {
             lineHeight: `${settings.lineHeight}px`,
             color: `${settings.inkColor}`,
             fontFamily: `${settings.fontFamily}`,
+            width: `${settings.handWrittenWidth}px`,
           }}
         >
           {inputValue}

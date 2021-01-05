@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HandwritingArea from "./HandwritingArea";
 import Typearea from "./Typearea";
-import Settings from "./Settings";
+
 import AwIcon from "./resources/images/assignmentWriter.png";
 import GithubCorner from "react-github-corner";
+import Settings from "./Settings";
 
 export const AppContext = React.createContext();
 
@@ -11,6 +12,11 @@ function App() {
   const [inputValue, setinputValue] = useState("hello\nworld");
   const [handWrittenText, sethandWrittenText] = useState(inputValue);
   const [isMobile, setisMobile] = useState(false);
+  const handwrittenAreaRef = useRef(null);
+  const [handwrittenAreaWidth, sethandwrittenAreaWidth] = useState(
+    handwrittenAreaRef
+  );
+
   const [settings, setsettings] = useState({
     letterSpacing: 0,
     axis: { x: 0, y: 0 },
@@ -19,18 +25,23 @@ function App() {
     inkColor: "black",
     fontFamily: "customFont1",
     bgPage: "blank",
+    handWrittenWidth: handwrittenAreaRef,
   });
 
   //** Detect Mobile display */
   useEffect(() => {
     const screenWidth = window.outerWidth;
-    console.log(screenWidth);
+
     if (screenWidth <= 500) {
       setisMobile(true);
     }
   }, [isMobile]);
 
   // ********************* HANDLER FUNCTIONS *********************
+  //** Handwriting area width */
+  const handleWidth = (e) => {
+    setsettings({ ...settings, handWrittenWidth: e.target.value });
+  };
 
   //** PAGE CHOOSER */
   const handlePageChoose = (e) => {
@@ -96,6 +107,10 @@ function App() {
         handleColorChange,
         handleFontFamily,
         handlePageChoose,
+        handwrittenAreaRef,
+        sethandwrittenAreaWidth,
+        handwrittenAreaWidth,
+        handleWidth,
       }}
     >
       {isMobile ? null : (
