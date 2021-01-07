@@ -14,22 +14,21 @@ html {
 /**************** HANDWRITTEN ****************/
 
 .flex-container-handwrittenArea {
+  display: block;
   border: 1px solid black;
   margin: 10px;
   background-image: url("./resources/images/page2.jpg");
   background-size: 100% 100%;
-
   padding: 10px;
   width: 40%;
   height: 297mm;
   width: 210mm;
-
   overflow: hidden;
-  background-color: #24233c;
 }
 
 /* *********The text that is being written********* */
 .handWritten {
+  width: 100%;
   font-size: 55px;
   margin: 0px;
   padding: 0px;
@@ -191,4 +190,12 @@ html {
   background-color: rgb(18, 144, 228);
   font-weight: 900;
   cursor: pointer;
+}
+
+.hiddenDiv {
+  /* min-height: 297mm;
+  min-width: 210mm;
+  max-height: 297mm;
+  max-width: 210mm; */
+  display: none;
 }
