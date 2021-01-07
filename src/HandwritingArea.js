@@ -35,6 +35,7 @@ function HandwritingArea() {
             color: `${settings.inkColor}`,
             fontFamily: `${settings.fontFamily}`,
             width: `${settings.handWrittenWidth}px`,
+            wordSpacing: `${settings.wordSpacing}px`,
           }}
         >
           {inputValue}

@@ -192,10 +192,8 @@ html {
   cursor: pointer;
 }
 
-.hiddenDiv {
-  /* min-height: 297mm;
-  min-width: 210mm;
-  max-height: 297mm;
-  max-width: 210mm; */
-  display: none;
+/* Letter spacing */
+.sliderValue {
+  margin: 0px;
+  padding: 0px;
 }

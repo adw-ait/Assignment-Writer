@@ -25,6 +25,7 @@ function App() {
     inkColor: "black",
     fontFamily: "customFont1",
     bgPage: "blank",
+    wordSpacing: 0,
     handWrittenWidth: handwrittenAreaRef,
   });
 
@@ -38,6 +39,12 @@ function App() {
   }, [isMobile]);
 
   // ********************* HANDLER FUNCTIONS *********************
+
+  //** Word spacing */
+  const handleWordSpacing = (e) => {
+    setsettings({ ...settings, wordSpacing: e.target.value });
+  };
+
   //** Handwriting area width */
   const handleWidth = (e) => {
     setsettings({ ...settings, handWrittenWidth: e.target.value });
@@ -111,6 +118,7 @@ function App() {
         sethandwrittenAreaWidth,
         handwrittenAreaWidth,
         handleWidth,
+        handleWordSpacing,
       }}
     >
       {isMobile ? null : (
