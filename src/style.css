@@ -195,7 +195,6 @@ html {
 /* ********* DOwnload button on hover ********* */
 .DownloadBtn:hover {
   background-color: rgb(18, 144, 228);
-  font-weight: 900;
   cursor: pointer;
 }
 

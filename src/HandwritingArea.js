@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { AppContext } from "./App";
 import blank from "./resources/images/page2.jpg";
-import ruled from "./resources/images/page1.jpg";
+import ruled from "./resources/images/page3.jpg";
 
 function HandwritingArea() {
   const {
