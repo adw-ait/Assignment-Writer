@@ -1,32 +1,54 @@
 import html2canvas from "html2canvas";
 import React from "react";
 import FileSaver from "file-saver";
+import jsPDF from "jspdf";
 
 function DownloadPage() {
-  const handleDownload = () => {
+  const handleDownload = (e) => {
+    const whichBtn = e.target.name;
     window.scrollTo(0, 0);
     let el = document.querySelector("#capture");
     let cloned = el.cloneNode(true);
     cloned.style.display = "block";
     document.body.appendChild(cloned);
-    html2canvas(cloned, { height: 1122.519685, width: 793.700787 }).then(
-      (canvas) => {
+    html2canvas(cloned).then((canvas) => {
+      if (whichBtn === "image") {
         canvas.toBlob((blob) => {
-          FileSaver.saveAs(blob, "Assignemnt_Screenshot.png");
+          FileSaver.saveAs(blob, "Assignment.png");
         });
-        cloned.style.display = "none";
+      } else if (whichBtn === "pdf") {
+        var imgData = canvas.toDataURL("image/jpeg");
+        var pdf = new jsPDF();
+        var height = pdf.internal.pageSize.getHeight();
+        var width = pdf.internal.pageSize.getWidth();
+        pdf.addImage(imgData, "JPEG", 0, 0, width, height);
+        pdf.save("Assignment.pdf");
       }
-    );
+
+      cloned.style.display = "none";
+    });
   };
   return (
-    <button
-      className="DownloadBtn"
-      onClick={() => {
-        handleDownload();
-      }}
-    >
-      DOWNLOAD
-    </button>
+    <div className="DownloadBtn-Container">
+      <button
+        className="DownloadBtn"
+        name="image"
+        onClick={(e) => {
+          handleDownload(e);
+        }}
+      >
+        IMAGE
+      </button>
+      <button
+        className="DownloadBtn"
+        name="pdf"
+        onClick={(e) => {
+          handleDownload(e);
+        }}
+      >
+        PDF
+      </button>
+    </div>
   );
 }
 
