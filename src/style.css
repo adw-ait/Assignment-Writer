@@ -63,6 +63,7 @@ html {
   border-radius: 15px;
   outline: none;
   border: none;
+  font-family: monospace;
 }
 
 .typeArea::-webkit-scrollbar {
@@ -168,7 +169,7 @@ html {
 
 /* ********* DOwnload button ********* */
 .DownloadBtn-Container {
-  /* border: 1px solid black; */
+  font-family: monospace;
   margin-left: auto;
   justify-self: end;
   align-self: flex-end;
