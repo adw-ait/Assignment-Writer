@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1.2em;
+  margin: 15px;
+}
+
+.footer-text:link {
+  text-decoration: none;
+  color: black;
+}
