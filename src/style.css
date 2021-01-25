@@ -199,6 +199,9 @@ html {
   background-color: rgb(18, 144, 228);
   cursor: pointer;
 }
+.DownloadBtn:disabled {
+  background-color: gray;
+}
 
 /* Letter spacing */
 .sliderValue {

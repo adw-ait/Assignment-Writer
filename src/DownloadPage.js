@@ -1,6 +1,6 @@
 import html2canvas from "html2canvas";
 import React from "react";
-import FileSaver from "file-saver";
+// import FileSaver from "file-saver";
 import jsPDF from "jspdf";
 
 function DownloadPage() {
@@ -13,9 +13,9 @@ function DownloadPage() {
     document.body.appendChild(cloned);
     html2canvas(cloned).then((canvas) => {
       if (whichBtn === "image") {
-        canvas.toBlob((blob) => {
-          FileSaver.saveAs(blob, "Assignment.png");
-        });
+        // canvas.toBlob((blob) => {
+        //   FileSaver.saveAs(blob, "Assignment.png");
+        // });
       } else if (whichBtn === "pdf") {
         var imgData = canvas.toDataURL("image/jpeg");
         var pdf = new jsPDF();
@@ -33,6 +33,7 @@ function DownloadPage() {
       <button
         className="DownloadBtn"
         name="image"
+        disabled
         onClick={(e) => {
           handleDownload(e);
         }}
